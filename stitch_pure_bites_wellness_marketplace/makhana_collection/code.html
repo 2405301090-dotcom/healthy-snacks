@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CrunchWise - Makhana Collection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e4e3db",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#acf4a4",
+                        "surface-container-high": "#eae8e0",
+                        "secondary-container": "#acf4a4",
+                        "surface-variant": "#e4e3db",
+                        "on-primary-fixed": "#002204",
+                        "on-error-container": "#93000a",
+                        "on-surface-variant": "#3f4a3c",
+                        "surface-dim": "#dcdad2",
+                        "secondary-fixed-dim": "#91d78a",
+                        "tertiary-fixed": "#ffddb4",
+                        "primary-fixed": "#94f990",
+                        "on-secondary-container": "#307231",
+                        "outline": "#6f7a6b",
+                        "tertiary-fixed-dim": "#ffb955",
+                        "surface-tint": "#006e1c",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-primary": "#78dc77",
+                        "secondary": "#2a6b2c",
+                        "surface": "#fbf9f1",
+                        "outline-variant": "#becab9",
+                        "on-primary-fixed-variant": "#005313",
+                        "surface-container-low": "#f5f4ec",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#1b1c17",
+                        "on-tertiary-container": "#492d00",
+                        "surface-bright": "#fbf9f1",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#d48c00",
+                        "inverse-on-surface": "#f3f1e9",
+                        "on-tertiary-fixed": "#291800",
+                        "on-tertiary-fixed-variant": "#633f00",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#003c0b",
+                        "on-secondary-fixed": "#002203",
+                        "surface-container": "#f0eee6",
+                        "primary-fixed-dim": "#78dc77",
+                        "background": "#fbf9f1",
+                        "primary-container": "#4caf50",
+                        "inverse-surface": "#30312c",
+                        "on-secondary-fixed-variant": "#0c5216",
+                        "on-background": "#1b1c17",
+                        "tertiary": "#835500",
+                        "on-primary": "#ffffff",
+                        "primary": "#006e1c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "stack-lg": "32px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "stack-md": "16px",
+                        "unit": "8px",
+                        "stack-sm": "8px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Lexend"],
+                        "label-md": ["Lexend"],
+                        "body-md": ["Lexend"],
+                        "headline-sm": ["Lexend"],
+                        "body-lg": ["Lexend"],
+                        "display-lg-mobile": ["Lexend"],
+                        "label-sm": ["Lexend"],
+                        "headline-md": ["Lexend"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for horizontal chip list to look premium */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased pb-[100px] pt-[80px]">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex items-center justify-between px-margin-mobile py-stack-md max-w-container-max mx-auto bg-surface dark:bg-surface-dim flat no shadows h-[72px]">
+<button class="text-on-surface-variant flex items-center justify-center p-2 rounded-full hover:bg-surface-container-low transition-colors duration-150 active:scale-95">
+<span class="material-symbols-outlined text-[24px]">location_on</span>
+</button>
+<h1 class="font-display-lg text-display-lg-mobile text-primary dark:text-primary-fixed-dim">CrunchWise</h1>
+<button class="text-on-surface-variant flex items-center justify-center p-2 rounded-full hover:bg-surface-container-low transition-colors duration-150 active:scale-95">
+<span class="material-symbols-outlined text-[24px]">notifications</span>
+</button>
+</header>
+<main class="max-w-container-max mx-auto md:px-margin-desktop">
+<!-- Section Header & Search -->
+<div class="px-margin-mobile md:px-0 mb-stack-lg">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Makhana Collection</h2>
+<p class="text-on-surface-variant font-body-md text-body-md mb-stack-md">Discover our premium roasted lotus seeds.</p>
+<div class="relative flex items-center w-full bg-surface-container-lowest border border-outline-variant rounded-full px-4 py-3 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all duration-300">
+<span class="material-symbols-outlined text-outline mr-2">search</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-body-md font-body-md placeholder-outline text-on-surface" placeholder="Search flavors..." type="text"/>
+<button class="ml-2 text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined">tune</span>
+</button>
+</div>
+</div>
+<!-- Filter Chips -->
+<div class="px-margin-mobile md:px-0 mb-stack-lg overflow-x-auto hide-scrollbar flex gap-unit pb-2">
+<button class="flex-shrink-0 bg-primary-container text-on-primary-container font-label-md text-label-md px-4 py-2 rounded-full border border-primary-container transition-colors">All</button>
+<button class="flex-shrink-0 bg-surface text-on-surface-variant font-label-md text-label-md px-4 py-2 rounded-full border border-outline-variant hover:bg-surface-container transition-colors">Calories</button>
+<button class="flex-shrink-0 bg-surface text-on-surface-variant font-label-md text-label-md px-4 py-2 rounded-full border border-outline-variant hover:bg-surface-container transition-colors">Protein</button>
+<button class="flex-shrink-0 bg-surface text-on-surface-variant font-label-md text-label-md px-4 py-2 rounded-full border border-outline-variant hover:bg-surface-container transition-colors">Flavor</button>
+<button class="flex-shrink-0 bg-surface text-on-surface-variant font-label-md text-label-md px-4 py-2 rounded-full border border-outline-variant hover:bg-surface-container transition-colors">Price</button>
+<button class="flex-shrink-0 bg-surface text-on-surface-variant font-label-md text-label-md px-4 py-2 rounded-full border border-outline-variant hover:bg-surface-container transition-colors">Gluten-Free</button>
+</div>
+<!-- Product Grid -->
+<div class="px-margin-mobile md:px-0 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-gutter">
+<!-- Product Card 1 -->
+<article class="col-span-1 md:col-span-2 lg:col-span-3 bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden flex flex-col hover:shadow-[0_4px_12px_rgba(27,94,32,0.06)] transition-shadow duration-300">
+<!-- Image Area (Top 60%) -->
+<div class="relative w-full aspect-[4/3] bg-error-container flex items-center justify-center p-4">
+<img class="w-full h-full object-contain mix-blend-multiply drop-shadow-md" data-alt="A premium styled product photography shot of a bag of Peri Peri Roasted Makhana snacks resting on a clean, soft earthy background. The lighting is warm and natural, emphasizing the crunchy texture of the lotus seeds scattered around the sleek, minimalist packaging. High-end culinary wellness aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATtkDWj-1dPJJzKs1xi1Dus8hW1QGulekUW4du6688rfNOnwNV_rVXYmlW0Vs04rShx8FfOM7AjxaKCzvbNS5T0sxe5b6Pky2UkSg0bdpiOvHySlRESEqE8bmkE0XaKcDVGDOcP-IoRx35R8T87EZENSuI8sZG0M0_mSPxvIACYSRgpVOzGSEGIBZ_LJvxDJtjOHmvKFqN2fPdehTfqp54OjE5owGBnAOY0cO3-qsIQu8J3_-LgEyT"/>
+<div class="absolute top-2 left-2 bg-surface text-on-surface font-label-sm text-label-sm px-2 py-1 rounded-full border border-outline-variant flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary">star</span> 4.8
+                    </div>
+</div>
+<!-- Content Area -->
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-2 mb-1">Peri Peri Roasted Makhana</h3>
+<p class="font-body-md text-body-md text-outline mb-stack-sm">90g</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">₹149</span>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-4 py-2 rounded-full hover:bg-surface-tint transition-colors shadow-sm active:scale-95 duration-150">Add</button>
+</div>
+</div>
+</article>
+<!-- Product Card 2 -->
+<article class="col-span-1 md:col-span-2 lg:col-span-3 bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden flex flex-col hover:shadow-[0_4px_12px_rgba(27,94,32,0.06)] transition-shadow duration-300">
+<div class="relative w-full aspect-[4/3] bg-surface-container flex items-center justify-center p-4">
+<img class="w-full h-full object-contain mix-blend-multiply drop-shadow-md" data-alt="A meticulously styled product photo of Himalayan Pink Salt Fox Nuts inside a premium, minimalist matte pouch. The product is placed on a soft, natural stone surface bathed in gentle, diffused daylight. A few raw pink salt crystals and roasted fox nuts are scattered elegantly beside the package, conveying purity and natural wellness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXYlTVaMoMKLbSWDHG5XyAv_iCUfNJEU5iQMVl0EAJ5oUdOHLegFdHombuCbc-J2y2l-ZcHGIDjD2xLYW7fMogXmiKsesYLZPCBkuB1d8BoNm3ZjeveGgJ92duinWbx7sugfT9GypTU9zjeHKLT3_eibXkZnEdJwnZw0pOZ-ccI9aVYcD813jIGCqTb82ZL2goUg_vgmIOjSPj6Jvx_2dHeUCIeMB0lOtuObckR_9HjTkqDU7oJhmX"/>
+<div class="absolute top-2 left-2 bg-surface text-on-surface font-label-sm text-label-sm px-2 py-1 rounded-full border border-outline-variant flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary">star</span> 4.9
+                    </div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-2 mb-1">Himalayan Pink Salt Fox Nuts</h3>
+<p class="font-body-md text-body-md text-outline mb-stack-sm">90g</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">₹129</span>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-4 py-2 rounded-full hover:bg-surface-tint transition-colors shadow-sm active:scale-95 duration-150">Add</button>
+</div>
+</div>
+</article>
+<!-- Product Card 3 -->
+<article class="col-span-1 md:col-span-2 lg:col-span-3 bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden flex flex-col hover:shadow-[0_4px_12px_rgba(27,94,32,0.06)] transition-shadow duration-300">
+<div class="relative w-full aspect-[4/3] bg-tertiary-fixed flex items-center justify-center p-4">
+<img class="w-full h-full object-contain mix-blend-multiply drop-shadow-md" data-alt="A high-end commercial shot of Tandoori Roasted Chana in an eco-friendly, premium snack bag. The setting features a rustic yet clean aesthetic with warm, directional lighting highlighting the earthy red and orange hues of the tandoori spice. Small bowls of raw spices sit softly out of focus in the background to emphasize authentic flavor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC9bFuxY2kUC5oqO6-4GQ8JWan_j1RgqABbCqGkkU9UtH1yQUB7qpa8jJ_l7_RdmHEkN5O3pB8ZaB_R85CRKGTfGNVDh8O5Ty86oOIFlW5HiAtnAGNM4-SVSnPEHNdvd5o2T4tMA4daeSY9zjFQrumRrxq-Fzi562nXC1iPp5n0bATpTt1fgG3jhxUoZvNQHDGQNwFD5niMXRsAYYnPLaeUBS82H524GvO9IA0FRaNyY_zopCvup9D"/>
+<div class="absolute top-2 left-2 bg-surface text-on-surface font-label-sm text-label-sm px-2 py-1 rounded-full border border-outline-variant flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary">star</span> 4.7
+                    </div>
+<div class="absolute top-2 right-2 bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm px-2 py-1 rounded-full">
+                        High Protein
+                    </div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-2 mb-1">Tandoori Roasted Chana</h3>
+<p class="font-body-md text-body-md text-outline mb-stack-sm">150g</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">₹99</span>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-4 py-2 rounded-full hover:bg-surface-tint transition-colors shadow-sm active:scale-95 duration-150">Add</button>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- BottomNavBar -->
+<!-- Displayed on mobile, hidden on larger screens as per standard app conventions if this was fully responsive, but JSON structural commands say "fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-2" -->
+<nav class="md:hidden shadow-[0_-4px_12px_rgba(27,94,32,0.06)] bg-surface-container-lowest dark:bg-surface-container-low fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-2 rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline p-2 hover:text-primary transition-all group" href="#">
+<span class="material-symbols-outlined mb-1 group-active:scale-90 duration-200">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container dark:bg-secondary text-on-secondary-container dark:text-on-secondary rounded-full px-4 py-1 hover:text-primary transition-all group scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="font-label-sm text-label-sm">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline p-2 hover:text-primary transition-all group" href="#">
+<span class="material-symbols-outlined mb-1 group-active:scale-90 duration-200">spa</span>
+<span class="font-label-sm text-label-sm">Wellness</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline p-2 hover:text-primary transition-all group" href="#">
+<span class="material-symbols-outlined mb-1 group-active:scale-90 duration-200">shopping_cart</span>
+<span class="font-label-sm text-label-sm">Cart</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline p-2 hover:text-primary transition-all group" href="#">
+<span class="material-symbols-outlined mb-1 group-active:scale-90 duration-200">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</a>
+</nav>
+</body></html>

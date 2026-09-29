@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CrunchWise Home Screen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e4e3db",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#acf4a4",
+                        "surface-container-high": "#eae8e0",
+                        "secondary-container": "#acf4a4",
+                        "surface-variant": "#e4e3db",
+                        "on-primary-fixed": "#002204",
+                        "on-error-container": "#93000a",
+                        "on-surface-variant": "#3f4a3c",
+                        "surface-dim": "#dcdad2",
+                        "secondary-fixed-dim": "#91d78a",
+                        "tertiary-fixed": "#ffddb4",
+                        "primary-fixed": "#94f990",
+                        "on-secondary-container": "#307231",
+                        "outline": "#6f7a6b",
+                        "tertiary-fixed-dim": "#ffb955",
+                        "surface-tint": "#006e1c",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-primary": "#78dc77",
+                        "secondary": "#2a6b2c",
+                        "surface": "#fbf9f1",
+                        "outline-variant": "#becab9",
+                        "on-primary-fixed-variant": "#005313",
+                        "surface-container-low": "#f5f4ec",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#1b1c17",
+                        "on-tertiary-container": "#492d00",
+                        "surface-bright": "#fbf9f1",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#d48c00",
+                        "inverse-on-surface": "#f3f1e9",
+                        "on-tertiary-fixed": "#291800",
+                        "on-tertiary-fixed-variant": "#633f00",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#003c0b",
+                        "on-secondary-fixed": "#002203",
+                        "surface-container": "#f0eee6",
+                        "primary-fixed-dim": "#78dc77",
+                        "background": "#fbf9f1",
+                        "primary-container": "#4caf50",
+                        "inverse-surface": "#30312c",
+                        "on-secondary-fixed-variant": "#0c5216",
+                        "on-background": "#1b1c17",
+                        "tertiary": "#835500",
+                        "on-primary": "#ffffff",
+                        "primary": "#006e1c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "stack-lg": "32px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "stack-md": "16px",
+                        "unit": "8px",
+                        "stack-sm": "8px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Lexend"],
+                        "label-md": ["Lexend"],
+                        "body-md": ["Lexend"],
+                        "headline-sm": ["Lexend"],
+                        "body-lg": ["Lexend"],
+                        "display-lg-mobile": ["Lexend"],
+                        "label-sm": ["Lexend"],
+                        "headline-md": ["Lexend"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background antialiased pb-24 md:pb-0 pt-20">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex items-center justify-between px-margin-mobile md:px-margin-desktop py-stack-md max-w-container-max mx-auto bg-surface dark:bg-surface-dim shadow-sm md:shadow-none">
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-surface-container-low transition-colors text-on-surface-variant md:hidden">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<button class="p-2 rounded-full hover:bg-surface-container-low transition-colors text-on-surface-variant hidden md:block">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+</button>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary dark:text-primary-fixed-dim tracking-tight">CrunchWise</h1>
+<div class="flex items-center gap-4 hidden md:flex">
+<nav class="flex gap-6 mr-8">
+<a class="font-label-md text-label-md text-primary font-semibold hover:bg-surface-container-low transition-colors px-3 py-2 rounded-lg scale-95 duration-150" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low transition-colors px-3 py-2 rounded-lg" href="#">Explore</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low transition-colors px-3 py-2 rounded-lg" href="#">Wellness</a>
+</nav>
+<button class="p-2 rounded-full hover:bg-surface-container-low transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button class="p-2 rounded-full hover:bg-surface-container-low transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+<div class="flex items-center gap-4 md:hidden">
+<button class="p-2 rounded-full hover:bg-surface-container-low transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop space-y-[80px] md:space-y-[120px] mt-8">
+<!-- Hero Banner -->
+<section class="relative rounded-[24px] overflow-hidden min-h-[400px] md:min-h-[500px] flex items-center bg-surface-container-high shadow-[0_4px_24px_rgba(27,94,32,0.04)]">
+<div class="absolute inset-0 w-full h-full">
+<img class="object-cover w-full h-full opacity-80 mix-blend-multiply" data-alt="A beautiful flat lay photography of roasted makhanas (fox nuts) spilling out of a woven bamboo bowl on a clean, light beige marble countertop. Soft, warm natural sunlight filters in from a nearby window, creating gentle shadows. Fresh mint leaves and scattered Himalayan pink salt crystals add subtle pops of color. The aesthetic is high-end, fresh, wellness-focused, and premium." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjp1EbeR09thZwrPjyTZyg81lTFX2z_aOwEXQAt23Dke1Y2IbUFGcyd1iP9vpxasyGtd1-lQWo_TlR6TRGu4Qh8mydyV9TyiZIqK90KpRa3kNO6ZncGbTvdfIB-I2vV1KlnEwshotX1g2qe1Pcb1E0kspf0-Wwj1UYEmQHEhAdtpaL4AUZsKMS0wE8ZSQESQdYTSGpGNgvMf4P8m9tpkrYesCjMjdcEZx6PKm5geIdXVPYBcKEW_gf"/>
+</div>
+<div class="relative z-10 p-8 md:p-16 max-w-2xl bg-surface/40 backdrop-blur-sm rounded-r-[24px]">
+<span class="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full font-label-sm text-label-sm mb-4">100% Natural</span>
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-4">Healthy Snacking, <br/><span class="text-secondary">Made Delicious</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Premium roasted makhanas and wholesome treats crafted for your mindful lifestyle.</p>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-8 py-4 rounded-full shadow-[0_4px_12px_rgba(0,110,28,0.2)] hover:bg-primary-container hover:text-on-primary-container transition-all hover:scale-105 duration-200">Shop Collection</button>
+</div>
+</section>
+<!-- Category Chips -->
+<section>
+<div class="flex overflow-x-auto hide-scrollbar gap-4 pb-4 snap-x">
+<button class="snap-start flex-none px-6 py-3 bg-secondary-container text-on-secondary-container rounded-full font-label-md text-label-md border-2 border-transparent transition-all">Roasted Makhanas</button>
+<button class="snap-start flex-none px-6 py-3 bg-surface text-on-surface-variant rounded-full font-label-md text-label-md border-2 border-outline-variant hover:border-secondary hover:text-secondary transition-all">Nuts</button>
+<button class="snap-start flex-none px-6 py-3 bg-surface text-on-surface-variant rounded-full font-label-md text-label-md border-2 border-outline-variant hover:border-secondary hover:text-secondary transition-all">Seeds</button>
+<button class="snap-start flex-none px-6 py-3 bg-surface text-on-surface-variant rounded-full font-label-md text-label-md border-2 border-outline-variant hover:border-secondary hover:text-secondary transition-all">Millet Snacks</button>
+<button class="snap-start flex-none px-6 py-3 bg-surface text-on-surface-variant rounded-full font-label-md text-label-md border-2 border-outline-variant hover:border-secondary hover:text-secondary transition-all">Protein Bars</button>
+</div>
+</section>
+<!-- Featured Collection: Signature Makhanas -->
+<section>
+<div class="flex justify-between items-end mb-stack-lg">
+<h3 class="font-headline-md text-headline-md text-on-background">Signature Makhanas</h3>
+<a class="font-label-md text-label-md text-primary flex items-center gap-1 hover:underline" href="#">View All <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-surface rounded-[24px] overflow-hidden border border-[#F2E8CF] shadow-[0_4px_16px_rgba(27,94,32,0.06)] group hover:shadow-[0_8px_24px_rgba(27,94,32,0.12)] transition-shadow">
+<div class="h-[240px] md:h-[300px] w-full bg-[#fcf8ed] relative overflow-hidden flex items-center justify-center p-8">
+<span class="absolute top-4 left-4 px-3 py-1 bg-[#F2E8CF] text-[#1B5E20] rounded-full font-label-sm text-label-sm z-10">Bestseller</span>
+<button class="absolute top-4 right-4 p-2 bg-surface rounded-full text-outline hover:text-error transition-colors shadow-sm z-10">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<img class="object-contain h-full group-hover:scale-105 transition-transform duration-500" data-alt="A stylized, high-quality product shot of Peri Peri roasted makhanas in a minimalist matte terracotta bowl. The background is a soft, warm beige with dramatic, soft directional lighting highlighting the red spice dust on the puffed lotus seeds. A few dried red chilies are artfully placed out of focus in the foreground. Premium wellness food photography aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe1n6wPDzdcThvLrql_MFNc9NU4Fc7hR_ZwB56rlcdN-4anPJ68Ad2DjUH2EkquQEslFwM-PokmsxfpZ_oK5ve2MpFQre4NAvnlYYvUPS1aY_YfvcV4svmFrf4Hz1AvZQdQdX0mRON_3p3tiIPsRJZYR7X4Uput-LNx_8htwjO85Onf_FhXQ8Cuv6QA7U1NHpfDuwjZkDSBEjpB0nBTj8Q1vSyEca-GUn3E6-CxRcX22HvS8qpOZzy"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-headline-sm text-headline-sm text-on-background">Fiery Peri Peri</h4>
+<span class="font-headline-sm text-headline-sm text-primary">$6.99</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">A bold and spicy kick with premium African bird's eye chili. Perfect for late-night cravings.</p>
+<button class="w-full py-3 border-2 border-secondary text-secondary rounded-full font-label-md text-label-md hover:bg-secondary hover:text-on-secondary transition-colors">Add to Cart</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface rounded-[24px] overflow-hidden border border-[#F2E8CF] shadow-[0_4px_16px_rgba(27,94,32,0.06)] group hover:shadow-[0_8px_24px_rgba(27,94,32,0.12)] transition-shadow">
+<div class="h-[240px] md:h-[300px] w-full bg-[#f4f7f4] relative overflow-hidden flex items-center justify-center p-8">
+<span class="absolute top-4 left-4 px-3 py-1 bg-[#F2E8CF] text-[#1B5E20] rounded-full font-label-sm text-label-sm z-10">Low Sodium</span>
+<button class="absolute top-4 right-4 p-2 bg-surface rounded-full text-outline hover:text-error transition-colors shadow-sm z-10">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<img class="object-contain h-full group-hover:scale-105 transition-transform duration-500" data-alt="A clean, elevated product shot of Himalayan Pink Salt roasted makhanas in a smooth, light olive-green ceramic bowl. The scene rests on a light gray concrete surface. Soft, airy lighting emphasizing the pristine white texture of the popped seeds and the delicate pink salt crystals. Minimalist, high-end healthy snack photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTrFnl-mUAeZ1ZuhinVfq9pMrMnvaNT_WwyCWy7JI3eRgxQPdLIkDHlIzwVsfdyfew0sXqBv89GPXbXnnBwOoJf9xq4fnJGtXxRe2zZanon7sGZSMz7t48JyMryEB34QW8UzXKAi9-vPEotiStAVLiMZ1--n1O64mw25cgOMuobHuODOJ7cbmIm8m25idfy4xG_3oEF2ZaZFaC58WB6-JjiZkLHRSAyAknj57Ex5P4C0jXN43wYxcI"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-headline-sm text-headline-sm text-on-background">Himalayan Pink Salt</h4>
+<span class="font-headline-sm text-headline-sm text-primary">$5.99</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">Lightly roasted with pure rock salt. The classic, guilt-free crunch for everyday snacking.</p>
+<button class="w-full py-3 border-2 border-secondary text-secondary rounded-full font-label-md text-label-md hover:bg-secondary hover:text-on-secondary transition-colors">Add to Cart</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Bestsellers Grid -->
+<section>
+<h3 class="font-headline-md text-headline-md text-on-background mb-stack-lg">Trending Bestsellers</h3>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-gutter">
+<!-- Small Card 1 -->
+<div class="bg-surface rounded-[16px] overflow-hidden border border-[#F2E8CF] shadow-[0_2px_8px_rgba(27,94,32,0.04)] group flex flex-col">
+<div class="h-32 md:h-48 bg-[#fdf3e8] p-4 flex items-center justify-center relative">
+<img class="object-contain h-full group-hover:scale-105 transition-transform duration-300" data-alt="A small, elegant packet of honey roasted mixed nuts leaning against a wooden spoon on a pristine white marble surface. Warm honey tones and amber lighting. Premium, artisan food aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-WDMu193fNl5VcawU-YDrUKJ9_3WLfs-kLuDWvCb3dLHTQQWUmeOIjNoRKj5LMxa0m_55XemOy7_AACNHkpG5r7dbmUGS-4cvW5dYnZmJTBdGQM1uIDkU1c8IkSAS8fQQ-OY9whpS-sSdgzk3fhl1W6duvYwPRzLxb3oz2zCQfb_8FBB2kYML-JMJT8AkhdtFQ-OvmjXSwHoQ9m-L0hQLYcv4TfpSmy6wAKv9X3jMDIJ2oHpUDIA8"/>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<span class="text-[10px] uppercase tracking-wider text-outline mb-1 font-semibold">Nuts</span>
+<h5 class="font-label-md text-label-md text-on-background mb-1">Honey Roasted Almonds</h5>
+<p class="font-label-md text-label-md text-primary mt-auto">$8.49</p>
+</div>
+</div>
+<!-- Small Card 2 -->
+<div class="bg-surface rounded-[16px] overflow-hidden border border-[#F2E8CF] shadow-[0_2px_8px_rgba(27,94,32,0.04)] group flex flex-col">
+<div class="h-32 md:h-48 bg-[#eef4f0] p-4 flex items-center justify-center relative">
+<img class="object-contain h-full group-hover:scale-105 transition-transform duration-300" data-alt="A minimalist shot of matcha flavored energy balls on a small sage green ceramic plate. The background is a soft, light cream color with gentle dappled sunlight shadows. Healthy, clean wellness vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0S9qCTKPj6alKGUAmBjc7MyBDdUK3Svt2KSY4W82PduUfikSmOqL8OitA_X5Z7QCVeo4z1HpdahDgKiG9PWzC0A-bYIq5LB7MXpcbXRIDmfyGDCGs3UKtN0mGyPPCTR4_yfKEU7EEdId8_Veta-vnYKVGYSN-svgJPgyD7t1M4_3sEpj2lSxLFLQZbp-HI9IvqFKuX0cSMLHtl8Y0wVFqXh7kzJhg4VUzxQ9A_YDHpYVAGoEHbZyK"/>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<span class="text-[10px] uppercase tracking-wider text-outline mb-1 font-semibold">Energy Bites</span>
+<h5 class="font-label-md text-label-md text-on-background mb-1">Matcha Bliss Balls</h5>
+<p class="font-label-md text-label-md text-primary mt-auto">$6.99</p>
+</div>
+</div>
+<!-- Small Card 3 -->
+<div class="bg-surface rounded-[16px] overflow-hidden border border-[#F2E8CF] shadow-[0_2px_8px_rgba(27,94,32,0.04)] group flex flex-col">
+<div class="h-32 md:h-48 bg-[#f8f0ed] p-4 flex items-center justify-center relative">
+<img class="object-contain h-full group-hover:scale-105 transition-transform duration-300" data-alt="A premium glass jar filled with mixed berry trail mix, featuring vibrant dried cranberries, dark chocolate chunks, and pumpkin seeds. Set against a light beige background with soft, diffused lighting. High-end natural snack photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_dX3fa1HZLPgP_yu8q-cyp20CFHfqdtU4j8HID6qUgpYCrq7LVT8kGYm15j87m0453jL7F5u0Ghc7ye7T-wpqnpPHwusciBkm7W-MIMhDr2yt3GHxbXWEh6hrzmwuWCEh2sdWulRjOH5dUOEPIhG8KmLaKDSAPdY5-rc1zztQCkC7R8KYpm0IIxEGMo6ElrUMCZ3j9aW2T-BnPrCHRpsQVtK2quT8m4ps0k-xl-DHvs-7jh6wdm-H"/>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<span class="text-[10px] uppercase tracking-wider text-outline mb-1 font-semibold">Trail Mix</span>
+<h5 class="font-label-md text-label-md text-on-background mb-1">Berry Antioxidant Mix</h5>
+<p class="font-label-md text-label-md text-primary mt-auto">$12.99</p>
+</div>
+</div>
+<!-- Small Card 4 -->
+<div class="bg-surface rounded-[16px] overflow-hidden border border-[#F2E8CF] shadow-[0_2px_8px_rgba(27,94,32,0.04)] group flex flex-col">
+<div class="h-32 md:h-48 bg-[#f0f4f8] p-4 flex items-center justify-center relative">
+<img class="object-contain h-full group-hover:scale-105 transition-transform duration-300" data-alt="A sleek, modern protein bar with elegant typography packaging lying on a light blue-grey slate. A small heap of raw cacao nibs is scattered nearby. Cool, crisp lighting emphasizing fitness and clean nutrition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuArfkSBzXw8h6BYWR9cwDEqAC1IvYPg3uvzRv_kNYp_X_ngDgora3KNaFxWEh9Y2kHeqQdV67KD3gUbYR4y8KBQ8D7MQr098Ag8yMhOUYX5B3PLWpmtUMR4msW7ZtiMEYZnUrsOe2SUyU7tzJuF-brMk1FV3b6GW9VBtTmHsBLAPT6HMY4XS7SHGrHDgAsBGlvMqnko_I_fL4VE9bfHGm0jbj2dDwoRzzuN3ys7i8Ow8ySdlxCw5zau"/>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<span class="text-[10px] uppercase tracking-wider text-outline mb-1 font-semibold">Protein Bars</span>
+<h5 class="font-label-md text-label-md text-on-background mb-1">Cacao Crunch Bar</h5>
+<p class="font-label-md text-label-md text-primary mt-auto">$3.49</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Horizontal Scroll: Under 100 Calories -->
+<section class="-mx-margin-mobile px-margin-mobile md:mx-0 md:px-0">
+<div class="flex justify-between items-end mb-stack-md md:mb-stack-lg">
+<h3 class="font-headline-md text-headline-md text-on-background">Under 100 Calories</h3>
+</div>
+<div class="flex overflow-x-auto hide-scrollbar gap-4 pb-4 snap-x">
+<!-- Scroll Item 1 -->
+<div class="snap-start flex-none w-64 bg-surface rounded-[20px] overflow-hidden border border-[#F2E8CF] shadow-[0_2px_12px_rgba(27,94,32,0.04)]">
+<div class="h-40 bg-[#f9f3f1] p-4 flex items-center justify-center relative">
+<span class="absolute top-3 left-3 px-2 py-1 bg-surface-container-high text-on-surface-variant rounded-full font-label-sm text-[10px]">90 kcal</span>
+<img class="object-contain h-full" data-alt="A small handful of perfectly roasted pumpkin seeds scattered playfully on a very light, warm neutral textured surface. Clean, crisp macro photography with soft shadows. Elegant wellness aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1QCTSmuOn9s8A7q4MnTWZ-3gqGjEuIbX7VLXAY_M3itOdQ1ZLMmYT6OFPl3nNJbhxwZMQEtIzrA2j4U4GhsiiSBWMsvkoBdHi7FwHlfqmL_AIoiRSDfO9anzCXgAgT_8WkL_Jws98uF1wvEmit55qq5vD_dWWJ1SAiPM9fHAoxV9V6_I8CRoDsC7rYC7cJ_F7fXBmU4EUokIHu16FHsN_S4FQem7lO2YjadOHKjNidHb2WNELTrlm"/>
+</div>
+<div class="p-4">
+<h5 class="font-label-md text-label-md text-on-background mb-1 truncate">Roasted Pumpkin Seeds</h5>
+<div class="flex justify-between items-center mt-2">
+<p class="font-label-md text-label-md text-primary">$4.99</p>
+<button class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center hover:bg-secondary hover:text-on-secondary transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Scroll Item 2 -->
+<div class="snap-start flex-none w-64 bg-surface rounded-[20px] overflow-hidden border border-[#F2E8CF] shadow-[0_2px_12px_rgba(27,94,32,0.04)]">
+<div class="h-40 bg-[#f1f6f9] p-4 flex items-center justify-center relative">
+<span class="absolute top-3 left-3 px-2 py-1 bg-surface-container-high text-on-surface-variant rounded-full font-label-sm text-[10px]">85 kcal</span>
+<img class="object-contain h-full" data-alt="Thin, crispy apple chips fanned out on a soft white linen napkin. The background is a clean, bright cream color. Soft, natural morning light highlighting the delicate texture of the dried fruit. Premium organic snack style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLUU_w-fivpXLNgUIwWvdqUYSUQCNhAJxcH09SbPSEvsHnhkOcEp7Zzp2Df9W4tXTWmcii-EyOwe6Zwy92a23WMXHGq6A0aLb1qeutdVSSr-sq9quig8zkh7oPYPbsuQD-ZBYmG2qz9zt_8LsmlVo7oLbIbb118qZ3uzkNW2pdXX-72EL9qjudcBsJSRvgpwtv0XVrWIkDeCsqx8liMcDruAQDpArhcHGU6oAjkz8JwcjESjM9_U4C"/>
+</div>
+<div class="p-4">
+<h5 class="font-label-md text-label-md text-on-background mb-1 truncate">Crispy Apple Chips</h5>
+<div class="flex justify-between items-center mt-2">
+<p class="font-label-md text-label-md text-primary">$5.49</p>
+<button class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center hover:bg-secondary hover:text-on-secondary transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Scroll Item 3 -->
+<div class="snap-start flex-none w-64 bg-surface rounded-[20px] overflow-hidden border border-[#F2E8CF] shadow-[0_2px_12px_rgba(27,94,32,0.04)]">
+<div class="h-40 bg-[#f9f8f1] p-4 flex items-center justify-center relative">
+<span class="absolute top-3 left-3 px-2 py-1 bg-surface-container-high text-on-surface-variant rounded-full font-label-sm text-[10px]">95 kcal</span>
+<img class="object-contain h-full" data-alt="A small, elegant bamboo bowl filled with puffed quinoa clusters lightly drizzled with dark chocolate. Placed on a light, minimalist background. Gentle, appetizing lighting capturing the crunchy texture. Modern health food photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqSA8nFAkJxXtMewkh7p_VRufkTRqqVpfQpBH1qddQnrWelMFNtn4HKHuJt-IGp807AooAS9QLvZ9eqWlDnYsxwb-0SUjV_eoy6bSUXuKr86d5cyMRtz4YN-468l7cbO_OOy8pUODik1owHgkWVYWWUOD19ck6yuadFEQ3P1gcGhEWg8Mli04r45m5mSyZn8KetRWxc6LkZOLTpjPOOR6RafQXImcZLAVh_0Fy32hZkvIVLNNGD4np"/>
+</div>
+<div class="p-4">
+<h5 class="font-label-md text-label-md text-on-background mb-1 truncate">Quinoa Choco Bites</h5>
+<div class="flex justify-between items-center mt-2">
+<p class="font-label-md text-label-md text-primary">$6.49</p>
+<button class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center hover:bg-secondary hover:text-on-secondary transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-2 shadow-[0_-4px_12px_rgba(27,94,32,0.06)] bg-surface-container-lowest dark:bg-surface-container-low rounded-t-xl md:hidden">
+<a class="flex flex-col items-center justify-center bg-secondary-container dark:bg-secondary text-on-secondary-container dark:text-on-secondary rounded-full px-4 py-1 scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-sm text-label-sm mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline p-2 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-label-sm text-label-sm mt-1">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline p-2 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="spa">spa</span>
+<span class="font-label-sm text-label-sm mt-1">Wellness</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline p-2 hover:text-primary transition-all relative" href="#">
+<span class="absolute top-1 right-2 w-2 h-2 bg-error rounded-full"></span>
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="font-label-sm text-label-sm mt-1">Cart</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline p-2 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-sm text-label-sm mt-1">Profile</span>
+</a>
+</nav>
+</body></html>
